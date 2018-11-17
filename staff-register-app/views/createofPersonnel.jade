@@ -1,0 +1,23 @@
+extends layout
+block content
+    .container
+        .content
+            h1 Create New Staff
+            hr
+            form.form-horizontal(action="/users/create", method="POST")
+                .form-group
+                    label.col-sm-3 Name
+                    input.col-sm-9.form-control(name="name", placeholder="Enter Name")
+                .form-group
+                    label.col-sm-3 Surname
+                    input.col-sm-9.form-control(name="surname", placeholder="Enter Surname")
+                .form-group
+                    label.col-sm-3 Date of Birth
+                    input.col-sm-9.form-control(name="dateofbirth", placeholder="Enter Date of Birth")
+                .form-group
+                    label.col-sm-3 Email
+                    input.col-sm-9.form-control(name="email", placeholder="Enter Email")
+                hr
+                .form-group
+                .col-sm-9
+                    button.btn.btn-primary(type="submit") Register

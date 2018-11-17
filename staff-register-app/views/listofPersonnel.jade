@@ -1,0 +1,29 @@
+extends layout
+block content
+    .container
+        .content
+            .row
+                h1 List of Personnel
+            hr
+            .row
+                table.table.table-hover.table-bordered
+                    thead
+                        tr
+                            th Name
+                            th Surname
+                            th Date of Birth
+                            th Email
+                            th Operation
+                    tbody
+                        each staff, i in staffList
+                            tr
+                                td #{staff.name}
+                                td #{staff.surname}
+                                td #{staff.date_of_birth}
+                                td #{staff.email}
+                                td 
+                                    a.btn.btn-danger.btn-xs(href="/users/delete/" + staff._id) Delete Personnel
+                hr
+                .row
+                    .col-md-12
+                        a.btn.btn-default(href="/users/create") (Register New Personnel)
